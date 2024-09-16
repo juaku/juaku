@@ -1,0 +1,20 @@
+{
+  "name": "juaku-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "filecoin.js": "^0.0.5-alpha",
+    "gun": "^0.2020.1240",
+    "ipfs-http-client": "^60.0.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
