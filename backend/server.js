@@ -4,6 +4,7 @@ import ipfs from './ipfs.js';
 import client from './filecoin.js';
 import gun from './gundb.js';
 import multer from 'multer';
+import postsRouter from './routes/posts.js';
 
 const upload = multer({ dest: 'uploads/' });
 
@@ -27,6 +28,9 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     res.status(500).send('Error al procesar el archivo');
   }
 });
+
+// Ruta para obtener todos los posts
+app.use('/api/posts', postsRouter);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
