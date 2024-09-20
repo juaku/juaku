@@ -1,0 +1,26 @@
+.post {
+    position: relative;
+}
+
+.post > img,
+.post > video{
+    display: block;
+    width: calc(100% + calc(var(--padding-inline) * 2));
+    margin-inline: calc(var(--padding-inline) * -1);
+}
+
+.post .info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding-block: 1.5rem;
+}
+
+.post .user {
+    display: block;
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    margin-inline-end: 1rem;
+}

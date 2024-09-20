@@ -1,0 +1,8 @@
+.preview img,
+.preview video {
+    width: 50%;
+}
+
+input[type="file"].fileSelector {
+    display: none;
+}
