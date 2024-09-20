@@ -67,36 +67,43 @@ const UploadButton = ({ onUploadStart, onUploadEnd, isComposing }) => {
         onUploadEnd();
     };
 
+    const handleCancel = () => {
+        setIsUploading(false);
+        onUploadEnd();
+      };
+
     return (
         <div>
             <input type="file" ref={fileInputRef} onChange={handleFileChange} className={ styles.fileSelector }/>
             {isComposing && (
                 <div>
-                    <h2>Archivo para subir:</h2>
+                    <h2>Completar publicación:</h2>
                     <div className={ styles.preview }>
                         {/* <img src={preview} alt="File Preview" style={{ maxWidth: '100%' }} /> */}
                         {fileType === 'image' && <img src={preview} alt="IPFS content" />}
                         {fileType === 'video' && <video src={preview} autoPlay muted loop playsInline />}
                         {fileType === 'unknown' && <p>Tipo de archivo desconocido o no soportado.</p>}
                     </div>
+                    <label htmlFor="username">Usuario:</label>{' '}
                     <input
                         type="text"
                         autoCapitalize="none"
                         autoCorrect="off"
                         spellCheck="false"
                         autoComplete="off"
-                        placeholder="Enter your username"
+                        placeholder=""
                         value={username}
                         onChange={handleUsernameChange}
-                    />
-                    <button onClick={handleUpload}>Upload to Pinata</button>
+                    />{' '}
+                    <button onClick={handleUpload}>Subir publicación</button>{' '}
                     {isUploading && <p>Subiendo...</p>}
-                    {cid && (
+                    {/* {cid && (
                         <div>
                             <h3>Uploaded File CID:</h3>
                             <p>{cid}</p>
                         </div>
-                    )}
+                    )} */}
+                    {!isUploading && <button onClick={handleCancel}>Cancelar</button>}
                 </div>
             )}
             

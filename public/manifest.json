@@ -1,0 +1,20 @@
+{
+  "name": "Juaku",
+  "short_name": "Juaku",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff0055",
+  "icons": [
+	{
+	  "src": "juaku-icon.png",
+	  "sizes": "192x192",
+	  "type": "image/png"
+	},
+	{
+	  "src": "juaku-icon.png",
+	  "sizes": "512x512",
+	  "type": "image/png"
+	}
+  ]
+}

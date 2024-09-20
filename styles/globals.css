@@ -35,8 +35,13 @@ button {
 }
 
 input[type="text"] {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border: none;
+  outline: none;
   padding: 10px;
+  /* background: transparent;
+  color: white; */
+  margin: 1rem .5rem;
 }
 
 button {

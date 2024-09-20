@@ -8,6 +8,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: calc(56px + 1rem);
+    z-index: 10;
+    padding-block-end: 1rem;
+}
+
+.search {
+    flex-grow: 1;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .icon {

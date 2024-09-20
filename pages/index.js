@@ -25,7 +25,9 @@ export default function Home () {
         <Head>
           <title>Juaku</title>
           <meta name="description" content="Juaku" />
-          <link rel="icon" href="" />
+          <link rel="icon" href="/juaku.png" />
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         </Head>
 
         <main className={styles.main}>
