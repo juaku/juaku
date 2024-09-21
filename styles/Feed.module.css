@@ -11,6 +11,7 @@
     bottom: 0;
     width: calc(100% + calc(var(--padding-inline) * 2));
     margin-inline: calc(var(--padding-inline) * -1);
+    pointer-events: none;
 }
 
 .post > img,

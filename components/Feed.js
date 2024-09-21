@@ -6,6 +6,7 @@ const pinataGateway = process.env.NEXT_PUBLIC_PINATA_GATEWAY;
 
 const Feed = () => {
 	const [feedItems, setFeedItems] = useState([]);
+    const [activeVideo, setActiveVideo] = useState(null);
 
 	useEffect(() => {
 		getFeed(async (data) => {
@@ -22,15 +23,24 @@ const Feed = () => {
 		});
 	}, []);
 
+    const handleVideoClick = (event) => {
+        if (activeVideo && activeVideo !== event.target) {
+          activeVideo.muted = true;
+        }
+        event.target.muted = !event.target.muted;
+        setActiveVideo(event.target);
+      };    
+
   return (
 	<div>
 		{feedItems.map((item, index) => (
 			<div key={index} className={styles.post}>
 				{item.fileType === 'image' && <img src={item.itemUrl} alt="IPFS content" />}
-				{item.fileType === 'video' && <video src={item.itemUrl} autoPlay muted loop playsInline />}
+				{item.fileType === 'video' && 
+                    <video src={item.itemUrl} autoPlay muted loop playsInline onClick={handleVideoClick} />}
 				{item.fileType === 'unknown' && <p>Tipo de archivo desconocido o no soportado.</p>}
                 <div className={styles.info} >
-                    <img src="" alt="User" className={ styles.user } />
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAwAB/ax5LIAAAAASUVORK5CYII" alt="User" className={ styles.user } />
                     <p>{item.username}</p>
                 </div>
 			</div>

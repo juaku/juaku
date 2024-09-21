@@ -7,12 +7,12 @@
   "theme_color": "#ff0055",
   "icons": [
 	{
-	  "src": "juaku-icon.png",
+	  "src": "juaku-app.png",
 	  "sizes": "192x192",
 	  "type": "image/png"
 	},
 	{
-	  "src": "juaku-icon.png",
+	  "src": "juaku-app.png",
 	  "sizes": "512x512",
 	  "type": "image/png"
 	}
