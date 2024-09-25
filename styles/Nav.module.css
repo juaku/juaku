@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     height: calc(56px + 1rem);
-    z-index: 10;
+    z-index: 5;
     padding-block-end: 1rem;
 }
 
@@ -22,7 +22,6 @@
 .icon {
     background-position: center;
     background-repeat: no-repeat;
-    text-indent: -999rem;
     padding: 0;
     width: 2rem;
     height: 2rem;

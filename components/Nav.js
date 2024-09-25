@@ -15,9 +15,9 @@ const Nav = () => {
 
     return (
         <nav className={ styles.nav }>
-            <button className={`${styles.upIcon} ${styles.icon}`}   onClick={handleScrollOrReload} >Ir arriba</button>
+            <button className={`${styles.upIcon} ${styles.icon}`} onClick={handleScrollOrReload} aria-label="Ir arriba"></button>
             <input type="text" placeholder="Buscar" className={styles.search} />
-            <button onClick={triggerUpload} className={`${styles.addIcon} ${styles.icon}`}>Subir</button>
+            <button onClick={triggerUpload} className={`${styles.addIcon} ${styles.icon}`} aria-label="Agregar"></button>
             {/* <div className={ styles.profile }></div> */}
         </nav>
     );
